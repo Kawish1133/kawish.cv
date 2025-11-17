@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kawish Iqbal — CV</title>
+  <style>
+    :root{
+      --bg:#f7fafc; /* very light */
+      --card:#ffffff;
+      --accent:#6b8ef6; /* soft blue */
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius:14px;
+      --maxw:900px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,var(--bg),#ffffff);
+      color:#0f172a;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+    .cv{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 10px 30px rgba(16,24,40,0.08);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      overflow:hidden;
+    }
+    /* Left column */
+    .side{
+      background: linear-gradient(180deg, rgba(107,142,246,0.08), rgba(107,142,246,0.02));
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .photo{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      overflow:hidden;
+      border:4px solid rgba(255,255,255,0.8);
+      box-shadow: 0 6px 18px rgba(99,102,241,0.12);
+      margin:auto;
+      background:#e6eefc;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{ text-align:center; margin-top:6px; }
+    .name h1{font-size:20px;margin:6px 0 0 0;letter-spacing:0.2px}
+    .name p{margin:0;color:var(--muted);font-size:13px}
+
+    .contact, .education, .skills{background:transparent;padding:6px 0}
+    .section-title{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+    .contact p, .education p{margin:6px 0;color:#0f172a;font-size:14px}
+
+    .tag{display:inline-block;background:rgba(107,142,246,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+
+    .skill{margin-bottom:10px}
+    .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:6px}
+    .bar{height:8px;background:rgba(15,23,42,0.06);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--accent),#8eb8ff)}
+
+    /* Right column */
+    .main{padding:28px 32px}
+    .heading{display:flex;justify-content:space-between;align-items:center}
+    .heading .title{font-size:18px;font-weight:700}
+    .heading .role{color:var(--muted);font-size:13px}
+
+    .profile{margin-top:18px;color:#0f172a;line-height:1.45}
+
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));padding:14px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6)}
+
+    .list{margin:0;padding:0;list-style:none}
+    .list li{margin-bottom:10px}
+    .muted{color:var(--muted);font-size:13px}
+
+    .footer{margin-top:26px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .cv{grid-template-columns:1fr;}
+      .side{order:2}
+      .main{order:1}
+    }
+  </style>
+</head>
+<body>
+  <article class="cv">
+    <aside class="side">
+      <div class="photo">
+        <!-- Replace the src with your profile picture file name or URL -->
+        <img src="/kawish.jpeg" alt="Kawish Iqbal - Profile Picture">
+      </div>
+      <div class="name">
+        <h1>Kawish Iqbal</h1>
+        <p class="muted">Student — BSCS, Agriculture University Peshawar</p>
+      </div>
+
+      <div class="contact">
+        <div class="section-title">Details</div>
+        <p><strong>Father's Name:</strong> Muhammad Iqbal</p>
+        <p><strong>Location:</strong> Chitral, Pakistan</p>
+        <p class="muted">Email: <em>ikawish7@gmail.com</em></p>
+        <p class="muted">Phone: <em>+92 3445133378</em></p>
+      </div>
+
+      <div class="education">
+        <div class="section-title">Education</div>
+        <p><strong>BSCS</strong> — Agriculture University Peshawar</p>
+        <p class="muted">Current student</p>
+      </div>
+
+      <div class="skills">
+        <div class="section-title">Skills</div>
+        <div class="skill">
+          <div class="label"><span>HTML / CSS</span><span class="muted">90%</span></div>
+          <div class="bar"><i style="width:90%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="label"><span>Bootstrap / Figma</span><span class="muted">80%</span></div>
+          <div class="bar"><i style="width:80%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="label"><span>Python / Linux</span><span class="muted">70%</span></div>
+          <div class="bar"><i style="width:70%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="label"><span>Docker</span><span class="muted">60%</span></div>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
+        <div class="skill">
+          <div class="label"><span>C++</span><span class="muted">55%</span></div>
+          <div class="bar"><i style="width:55%"></i></div>
+        </div>
+      </div>
+
+      <div style="margin-top:auto; text-align:center;">
+        <span class="tag">Available for internships</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="heading">
+        <div>
+          <div class="title">Kawish Iqbal</div>
+          <div class="role muted">BSCS Student — Agriculture University Peshawar</div>
+        </div>
+        <div class="tag">From: Chitral</div>
+      </div>
+
+      <div class="profile">
+        <strong>Profile</strong>
+        <p class="muted">Motivated BSCS student from Chitral studying at Agriculture University Peshawar. Passionate about web development, system administration, and software development. Currently learning Docker, advanced Linux usage, and practical Python applications.</p>
+      </div>
+
+      <div class="grid-two">
+        <section class="card">
+          <h4 style="margin:0 0 8px 0">Projects & Experience</h4>
+          <ul class="list muted">
+            <li><strong>Personal Portfolio</strong> — Built a responsive portfolio using HTML, CSS and Bootstrap.</li>
+            <li><strong>University Projects</strong> — Coursework projects in programming and data structures (C++ and Python).</li>
+            <li><strong>Linux / Docker Practice</strong> — Setup local dev environments and Nginx containers for testing.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h4 style="margin:0 0 8px 0">Education & Certificates</h4>
+          <ul class="list muted">
+            <li><strong>BSCS</strong> — Agriculture University Peshawar (ongoing)</li>
+            <li><strong>Online:</strong> Intro to Python, Basic Linux commands (self-study)</li>
+          </ul>
+        </section>
+      </div>
+
+      <div style="margin-top:18px" class="card">
+        <h4 style="margin:0 0 8px 0">Contact & Links</h4>
+        <p class="muted">Replace these placeholders with your real links:</p>
+        <p class="muted">GitHub: <em>github.com/yourusername</em> · LinkedIn: <em>linkedin.com/in/yourprofile</em></p>
+      </div>
+
+      <div class="footer muted">
+        <div><strong>Note:</strong> Replace <code>profile.jpg</code> with your actual photo file or a remote URL. You can edit name, email and phone directly in this file.</div>
+      </div>
+    </main>
+  </article>
+</body>
+</html>
